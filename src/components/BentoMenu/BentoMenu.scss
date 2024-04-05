@@ -1,0 +1,51 @@
+.onigiri{
+    width: 1rem;
+    height:1rem;
+}
+
+.bentoMenu{
+    display: grid;
+    grid-template-columns: 1rem 1rem 1rem;
+    margin-top: 1.5%;
+    margin-left:1.5%;
+}
+
+
+
+.bentoMenu:hover .onigiri:nth-child(1) {
+    transform: rotate(-360deg);
+    transition: 0.6s;
+
+}
+ .bentoMenu:hover .onigiri:nth-child(2) {
+    transform: rotate(360deg);
+    transition: 0.6s;
+} 
+
+.bentoMenu:hover .onigiri:nth-child(3) {
+    transform: rotate(-360deg);
+    transition: 0.6s;
+}
+
+.bentoMenu:hover .onigiri:nth-child(4) {
+   
+}
+.bentoMenu:hover .onigiri:nth-child(5) {
+  
+}
+.bentoMenu:hover .onigiri:nth-child(6) {
+  
+}
+.bentoMenu:hover .onigiri:nth-child(7) {
+    
+}
+.bentoMenu:hover .onigiri:nth-child(8) {
+
+}
+.bentoMenu:hover .onigiri:nth-child(9) {}
+
+.test{
+    width: 20rem;
+    height: 40rem;
+    border: black solid 1px;
+}
