@@ -1,23 +1,18 @@
 import React, { useState } from 'react';
-import riceball from "./../../assets/onigiri.svg";
 import "./BentoMenu.scss";
 
 const FoodArray: string[] = ["onigiri", "nigiri", "tempura", "sake", "dango"];
 
 const BentoMenu = () => {
-  const [menuClicked, setMenuClicked] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const menuClick = () => {
-    setMenuClicked(!menuClicked);
-  }
-
-  const hideClick = () => {
-    setMenuClicked(false);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   }
 
   return (
     <div>
-      <div className="bentoMenu " onClick={menuClick}>
+      <div className={`bentoMenu ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
         <span className="square"></span>
         <span className="square"></span>
         <span className="square"></span>
@@ -28,9 +23,9 @@ const BentoMenu = () => {
         <span className="square"></span>
         <span className="square"></span>
       </div>
-      <ul className={`menulist animationGrowDown ${menuClicked ? 'visible' : ''}`}>
+    <ul className={`menulist ${menuOpen ? 'open' : ''}`}>
         {FoodArray.map((food, index) => (
-          <li className="menuitems" key={index} onClick={hideClick}>{food}</li>
+          <li key={index}>{food}</li>
         ))}
       </ul>
     </div>
