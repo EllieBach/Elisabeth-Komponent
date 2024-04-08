@@ -25,7 +25,7 @@ const BentoMenu = () => {
       </div>
     <ul className={`menulist ${menuOpen ? 'open' : ''}`}>
         {FoodArray.map((food, index) => (
-          <li key={index}>{food}</li>
+          <li className="menuitems"key={index}>{food}</li>
         ))}
       </ul>
     </div>

@@ -40,23 +40,7 @@
 .menuitems:hover{
     background-color: lightpink;
 }
-.animationGrowDown               {
-    animation: growDown 6s;
-    
 
-}
-@keyframes growDown {
-    0% {
-      opacity: 0;
-      max-height: 0;
-    }
-  
-    100% {
-      opacity: 1;
-      max-height: 200px; /* Adjust the height accordingly */
-      background-color: greenyellow;
-    }
-  }
 
 .visible {
     opacity: 1;
