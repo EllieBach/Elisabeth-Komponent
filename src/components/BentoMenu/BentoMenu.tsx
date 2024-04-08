@@ -11,7 +11,7 @@ const BentoMenu = () => {
   }
 
   return (
-    <div>
+    <div className='bentoContainer'>
       <div className={`bentoMenu ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
         <span className="square"></span>
         <span className="square"></span>
