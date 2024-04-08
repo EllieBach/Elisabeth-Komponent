@@ -1,46 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import riceball from "./../../assets/onigiri.svg";
-import "./BentoMenu.scss"
+import "./BentoMenu.scss";
 
+const FoodArray: string[] = ["onigiri", "nigiri", "tempura", "sake", "dango"];
 
-const handleClick = () =>{
-    console.log("potato")
-}
 const BentoMenu = () => {
-  return (
-    <>
-   
-    <div className="bentoMenu" onClick={handleClick}>
-      <div className="onigiri">
-        <img src={riceball} alt="Rice Ball" />
-      </div>
-      <div className="onigiri">
-        <img src={riceball} alt="Rice Ball" />
-      </div>
-      <div className="onigiri">
-        <img src={riceball} alt="Rice Ball" />
-      </div>
-      <div className="onigiri">
-        <img src={riceball} alt="Rice Ball" />
-      </div>
-      <div className="onigiri">
-        <img src={riceball} alt="Rice Ball" />
-      </div>
-      <div className="onigiri">
-        <img src={riceball} alt="Rice Ball" />
-      </div>
-      <div className="onigiri">
-        <img src={riceball} alt="Rice Ball" />
-      </div>
-      <div className="onigiri">
-        <img src={riceball} alt="Rice Ball" />
-      </div>
-      <div className="onigiri">
-        <img src={riceball} alt="Rice Ball" />
-      </div>
-    </div>
+  const [menuClicked, setMenuClicked] = useState(false);
 
-    </>
+  const menuClick = () => {
+    setMenuClicked(!menuClicked);
+  }
+
+  const hideClick = () => {
+    setMenuClicked(false);
+  }
+
+  return (
+    <div>
+      <div className="bentoMenu" onClick={menuClick}>
+        <span className="square"></span>
+        <span className="square"></span>
+        <span className="square"></span>
+        <span className="square"></span>
+        <span className="square"></span>
+        <span className="square"></span>
+        <span className="square"></span>
+        <span className="square"></span>
+        <span className="square"></span>
+      </div>
+      <ul className={`menulist ${menuClicked ? 'visible' : ''}`}>
+        {FoodArray.map((food, index) => (
+          <li className="menuitems" key={index} onClick={hideClick}>{food}</li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
