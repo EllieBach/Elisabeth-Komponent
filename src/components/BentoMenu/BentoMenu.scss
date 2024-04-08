@@ -1,7 +1,7 @@
 .bentoMenu {
     display: grid;
     grid-template-columns: 1rem 1rem 1rem;
-    gap: 0.5rem; /* Adjust the value according to your preference */
+    gap: 0.5rem; 
     margin-top: 1.5%;
     margin-left: 1.5%;
 }
@@ -15,13 +15,34 @@
 .menulist {
     list-style: none;
     width: 15rem;
-    background-color: whitesmoke;
     opacity: 0;
     height: 0;
     overflow: hidden;
     transition: opacity 0.3s, height 0.3s;
     border-radius: 0 0 20px 20px;
+    background-color: whitesmoke
    
+}
+
+.animationGrowDown               {
+    animation: growDown 6s;
+    
+
+}
+@keyframes growDown{
+    0%{
+        max-height: 0%;
+        opacity: 0;
+    
+    }
+
+    50%{
+        max-height: 50%;
+    }
+    100%{
+        max-height: 100%;
+        background-color: whitesmoke;
+    }
 }
 
 .visible {

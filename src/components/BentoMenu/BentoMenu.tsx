@@ -17,7 +17,7 @@ const BentoMenu = () => {
 
   return (
     <div>
-      <div className="bentoMenu" onClick={menuClick}>
+      <div className="bentoMenu " onClick={menuClick}>
         <span className="square"></span>
         <span className="square"></span>
         <span className="square"></span>
@@ -28,7 +28,7 @@ const BentoMenu = () => {
         <span className="square"></span>
         <span className="square"></span>
       </div>
-      <ul className={`menulist ${menuClicked ? 'visible' : ''}`}>
+      <ul className={`menulist animationGrowDown ${menuClicked ? 'visible' : ''}`}>
         {FoodArray.map((food, index) => (
           <li className="menuitems" key={index} onClick={hideClick}>{food}</li>
         ))}
