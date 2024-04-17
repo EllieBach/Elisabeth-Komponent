@@ -1,15 +1,16 @@
-import { useState } from 'react'
+import { useState } from "react";
 
-import './App.css'
-import BentoMenu from './components/BentoMenu/BentoMenu'
-
+import "./App.css";
+import BentoMenu from "./components/BentoMenu/BentoMenu";
+import MeatballMenu from "./components/meatballMenu/MeatballMenu";
 
 function App() {
- 
-
   return (
-   <BentoMenu/>
-  )
+    <>
+      <BentoMenu />;
+      <MeatballMenu />
+    </>
+  );
 }
 
-export default App
+export default App;
