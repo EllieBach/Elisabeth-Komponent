@@ -5,12 +5,7 @@ import BentoMenu from "./components/BentoMenu/BentoMenu";
 import MeatballMenu from "./components/meatballMenu/MeatballMenu";
 
 function App() {
-  return (
-    <>
-      <BentoMenu />
-      <MeatballMenu />
-    </>
-  );
+  return <BentoMenu />;
 }
 
 export default App;

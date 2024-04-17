@@ -1,46 +1,34 @@
-import React from 'react';
-import riceball from "./../../assets/onigiri.svg";
-import "./BentoMenu.scss"
+import React, { useState } from 'react';
+import "./BentoMenu.scss";
 
+const FoodArray: string[] = ["onigiri", "nigiri", "tempura", "sake", "dango"];
 
-const handleClick = () =>{
-    console.log("potato")
-}
 const BentoMenu = () => {
-  return (
-    <>
-   
-    <div className="bentoMenu" onClick={handleClick}>
-      <div className="onigiri">
-        <img src={riceball} alt="Rice Ball" />
-      </div>
-      <div className="onigiri">
-        <img src={riceball} alt="Rice Ball" />
-      </div>
-      <div className="onigiri">
-        <img src={riceball} alt="Rice Ball" />
-      </div>
-      <div className="onigiri">
-        <img src={riceball} alt="Rice Ball" />
-      </div>
-      <div className="onigiri">
-        <img src={riceball} alt="Rice Ball" />
-      </div>
-      <div className="onigiri">
-        <img src={riceball} alt="Rice Ball" />
-      </div>
-      <div className="onigiri">
-        <img src={riceball} alt="Rice Ball" />
-      </div>
-      <div className="onigiri">
-        <img src={riceball} alt="Rice Ball" />
-      </div>
-      <div className="onigiri">
-        <img src={riceball} alt="Rice Ball" />
-      </div>
-    </div>
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    </>
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  }
+
+  return (
+    <div className='bentoContainer'>
+      <div className={`bentoMenu ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
+        <span className="square"></span>
+        <span className="square"></span>
+        <span className="square"></span>
+        <span className="square"></span>
+        <span className="square"></span>
+        <span className="square"></span>
+        <span className="square"></span>
+        <span className="square"></span>
+        <span className="square"></span>
+      </div>
+    <ul className={`menulist ${menuOpen ? 'open' : ''}`}>
+        {FoodArray.map((food, index) => (
+          <li className="menuitems"key={index}>{food}</li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
