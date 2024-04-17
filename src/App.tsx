@@ -1,21 +1,16 @@
-import { useState } from 'react'
-import './App.css'
-import BentoMenu from './components/BentoMenu/BentoMenu'
-import BearSVGComponents from './components/Switch/Switch'
+import { useState } from "react";
 
-
+import "./App.css";
+import BentoMenu from "./components/BentoMenu/BentoMenu";
+import MeatballMenu from "./components/meatballMenu/MeatballMenu";
 
 function App() {
- 
-
   return (
     <>
-    <BentoMenu />
-    <BearSVGComponents.CheckBoxIndicator/>
-    <BearSVGComponents.BearSVG />
-    <BearSVGComponents.ArmSVG />
-  </>
-  )
+      <BentoMenu />;
+      <MeatballMenu />
+    </>
+  );
 }
 
-export default App
+export default App;
